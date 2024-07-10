@@ -8,7 +8,7 @@ export function TasksPage() {
 
   useEffect(() => {
     getTasks();
-  }, [tasks]);
+  }, []);
 
   return (
     <>
