@@ -6,10 +6,9 @@ import { ImFileEmpty } from "react-icons/im";
 export function TasksPage() {
   const { tasks, getTasks} = useTasks();
 
- /*  useEffect(() => {
+  useEffect(() => {
     getTasks();
-  }, []); */
-  getTasks();
+  }, []);
   return (
     <>
       {tasks.length === 0 && (
