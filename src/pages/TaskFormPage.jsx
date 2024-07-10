@@ -22,12 +22,12 @@ export function TaskFormPage() {
   const onSubmit = async (data) => {
     try {
       if (params.id) {
-        updateTask(params.id, {
+        await updateTask(params.id, {
           ...data,
           date: dayjs.utc(data.date).format(),
         });
       } else {
-        createTask({
+        await createTask({
           ...data,
           date: dayjs.utc(data.date).format(),
         });

@@ -55,7 +55,6 @@ export function TaskProvider({ children }) {
 
     try {
        const res = await updateTaskRequest(id, task);
-       setTasks([...tasks,res.data])
      
     } catch (error) {
       console.error(error);
