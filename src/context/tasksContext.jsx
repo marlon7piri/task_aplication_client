@@ -32,11 +32,11 @@ export function TaskProvider({ children }) {
     }
   };
 
-  const createTask = async (task) => {
+  const createTask = async (newtask) => {
     try {
 
-      const res = await createTaskRequest(task);
-       if(res.status === 200)  setTasks([...task,res.data])
+      const res = await createTaskRequest(newtask);
+       if(res.status === 200)  setTasks([...tasks,res.data])
     } catch (error) {
       console.log(error);
     }
