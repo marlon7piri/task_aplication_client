@@ -36,7 +36,7 @@ export function TaskProvider({ children }) {
     try {
 
       const res = await createTaskRequest(task);
-       /* if(res.status === 200) */  setTasks([...task,res.data])
+       if(res.status === 200)  setTasks([...task,res.data])
     } catch (error) {
       console.log(error);
     }
